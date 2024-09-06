@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My First Page</title>
+  <link rel='icon' href="images/logo.jpg" type="image/jpg">
+  <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+    body {
+      background-color: darkseagreen;
+    }
+    div {
+      display: inline-block;
+      border: 5px solid black;
+    }
+    #image {
+      line-height: 600px;
+      width: 600px;      
+      margin: 0 auto;
+      background-color: brown;
+      background-image: url('');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: white;
+      text-align: center;      
+      font-size: 150%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+       
+  </style>
+
+  <script>
+    function upDate(previewPic) {
+    document.getElementById('image').style.backgroundImage = 'url(' + previewPic.src + ")";
+    document.getElementById('image').innerHTML = previewPic.alt;
+  }
+
+    function unDo() {
+        document.getElementById('image').style.backgroundImage = "none";
+        document.getElementById('image').innerHTML = "这里显示你鼠标所在位置的图片"
+    }
+  </script>
+</head>
+
+<body>
+  This is my first page.
+  <hr>
+  <header id="back">
+    图片导航
+    <nav>
+      <ol>
+        <li><a href="#one">我的画廊</a></li>
+        <li><a href="#two">我的音乐</a></li>
+        <li><a href="#three">我的宠物们</a></li>
+      </ol>
+    </nav>
+    <hr>
+
+  </header>
+
+  <main>
+    <h1 id="one">我的画廊</h1>    
+
+    <div id="image">      
+
+    </div>
+    <p></p>
+    <div>
+      <img src="images/0.png" alt="image 0" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>猫骑士</p>
+    </div>
+    <div>
+      <img src="images/1.png" alt="image 1" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>六指琴魔</p>
+    </div>
+    <div>
+      <img src="images/2.png" alt="image 2" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>我的工作室</p>
+    </div>
+    <div>
+      <img src="images/3.png" alt="image 3" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>社团</p>
+    </div>
+    <div>
+      <img src="images/4.png" alt="image 4" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>咖啡厅</p>
+    </div>
+    <div>
+      <img src="images/5.png" alt="image 5" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>班机接我下班</p>
+    </div>
+    <div>
+      <img src="images/6.png" alt="image 6" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>切磋</p>
+    </div>
+    <div>
+      <img src="images/7.png" alt="image 7" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>猛虎扑食1</p>
+    </div>
+    <div>
+      <img src="images/8.png" alt="image 8" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>猛虎扑食2</p>
+    </div>
+    <div>
+      <img src="images/9.png" alt="image 9" width="150" onmouseover="upDate(this)" onmouseout="unDo()">
+      <p>猛虎扑食3</p>
+    </div>
+
+    <a href="#back">返回</a>
+    <hr>
+
+    <h1 id="two">
+      我的音乐
+    </h1>
+    <div style="border: 2px salmon">
+      <audio controls>
+        <source src="audios/Acid_Indigestion.mp3" type="audio/mpeg">
+        你的浏览器不支持音乐元素。
+      </audio>
+      <p>Acid Indigestion</p>
+    </div>
+    <div style="border: 2px salmon">
+      <audio controls>
+        <source src="audios/Cool_Shades.mp3" type="audio/mpeg">
+        你的浏览器不支持音乐元素。
+      </audio>
+      <p>Cool Shades</p>
+    </div>
+    <div style="border: 2px salmon">
+      <audio controls>
+        <source src="audios/Earth_Mover.mp3" type="audio/mpeg">
+        你的浏览器不支持音乐元素。
+      </audio>
+      <p>Earth Mover</p>
+    </div>
+    <div style="border: 2px salmon">
+      <audio controls>
+        <source src="audios/English_Channel.mp3" type="audio/mpeg">
+        你的浏览器不支持音乐元素。
+      </audio>
+      <p>English Channel</p>
+    </div>
+    <a href="#back">返回</a>
+    <hr>
+
+    <h1 id="three">
+      我的宠物们
+    </h1>
+    <div style="border: 2px salmon">
+      <video width="320" controls>
+        <source src="videos/001.mp4" type="video/mp4">
+        你的浏览器不支持视频元素。
+      </video>
+      <p>我的宠物们1</p>
+    </div>
+    <div style="border: 2px salmon">
+      <video width="320" controls>
+        <source src="videos/002.mp4" type="video/mp4">
+        你的浏览器不支持视频元素。
+      </video>
+      <p>我的宠物们2</p>
+    </div>
+    <a href="#back">返回</a>
+    <hr>
+
+    <h1>我爱的游戏</h1>
+    <table border="2px">
+      <tr>
+        <th>游戏名称</th>
+        <th>开发公司</th>
+        <th>游戏得分</th>        
+      </tr>
+      <tr>
+        <td>刺客信条</td>
+        <td>UBI</td>
+        <td>90</td>        
+      </tr>
+      <tr>
+        <td>极品飞车</td>
+        <td>EA</td>
+        <td>80</td>        
+      </tr>
+    </table>
+    <hr>
+
+  </main>
+
+  <footer>
+    <p>版权&copy; 归狄老师所有 2010~2024年 请随便翻录</p>
+    <p>友情链接 <a href="http://www.ichessgeek.com">我的主站</a></p>
+    <hr>
+
+  </footer>
+
+  <!-- <script src=" script.js"></script> -->
+</body>
+
+</html>
